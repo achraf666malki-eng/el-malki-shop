@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apparel & Custom Prints Store</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #f8f9fa; color: #333; line-height: 1.6; }
+        
+        /* Navbar - شريط علوي شفاف، رقيق وممتد بالكامل فوق الخلفية */
+        header { 
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.4); 
+            color: #fff; 
+            padding: 8px 4%; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            z-index: 100;
+        }
+        
+        header .logo { font-size: 16px; font-weight: bold; color: #ff4757; text-transform: uppercase; letter-spacing: 1px; }
+        header nav a { color: #fff; text-decoration: none; margin-left: 15px; font-size: 13px; font-weight: 500; transition: 0.3s; }
+        header nav a:hover { color: #ff4757; }
+        
+        /* Hero Section */
+        .hero { 
+            position: relative;
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('khalfiya.jpeg') center/cover no-repeat; 
+            height: 65vh; 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: center; 
+            align-items: center; 
+            color: #fff; 
+            text-align: center; 
+            padding: 60px 20px 20px 20px; 
+        }
+        .hero h1 { font-size: 34px; margin-bottom: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.7); }
+        .hero p { font-size: 15px; margin-bottom: 20px; max-width: 600px; text-shadow: 1px 1px 3px rgba(0,0,0,0.7); }
+        
+        .btn { background-color: #ff4757; color: #fff; padding: 9px 22px; text-decoration: none; border-radius: 25px; font-weight: bold; border: none; cursor: pointer; display: inline-block; transition: 0.3s; font-size: 14px; }
+        .btn:hover { background-color: #e84118; }
+        .btn-whatsapp { background-color: #25d366; color: #fff; font-size: 13px; padding: 8px 15px; width: 90%; margin-top: 5px; }
+        .btn-whatsapp:hover { background-color: #128c7e; }
+        
+        .container { width: 95%; max-width: 1300px; margin: 40px auto; }
+        .section-title { text-align: center; font-size: 28px; margin-bottom: 30px; }
+        
+        /* Grid Layout */
+        .products-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
+            gap: 20px; 
+        }
+        
+        .product-card { background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.08); text-align: center; padding-bottom: 15px; transition: 0.3s; }
+        .product-card:hover { transform: translateY(-5px); }
+        .product-card img { width: 100%; height: 260px; object-fit: cover; }
+        .product-card h3 { margin: 12px 10px 5px; font-size: 15px; font-weight: 600; }
+        .product-card .price { color: #ff4757; font-size: 17px; font-weight: bold; margin-bottom: 8px; }
+        
+        /* Floating WhatsApp Button */
+        .whatsapp-float { position: fixed; width: 55px; height: 55px; bottom: 25px; right: 25px; background-color: #25d366; color: #FFF; border-radius: 50px; text-align: center; font-size: 30px; box-shadow: 2px 2px 10px rgba(0,0,0,0.3); z-index: 1000; display: flex; align-items: center; justify-content: center; text-decoration: none; transition: 0.3s; }
+        .whatsapp-float:hover { transform: scale(1.1); background-color: #128c7e; }
+        
+        footer { background: #111; color: #fff; text-align: center; padding: 15px; margin-top: 50px; font-size: 14px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Official Store</div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#products">Products</a>
+            <a href="https://wa.me/212625992151" target="_blank">Contact Us</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <h1>Custom Apparel & Unique Prints</h1>
+        <p>Discover our latest collection of premium custom-printed t-shirts and hoodies with fast home delivery.</p>
+        <a href="#products" class="btn">Shop Now</a>
+    </section>
+
+    <section class="container" id="products">
+        <h2 class="section-title">Featured Collection</h2>
+        <div class="products-grid">
+            
+            <div class="product-card">
+                <img src="lofi.jpeg" alt="Lofi Oversized T-Shirt">
+                <h3>Oversized T-Shirt - Lofi</h3>
+                <div class="price">200 MAD</div>
+                <a href="https://wa.me/212625992151?text=Hello%2C%20I%20want%20to%20order%20the%20Lofi%20T-Shirt" target="_blank" class="btn btn-whatsapp">
+                    <i class="fab fa-whatsapp"></i> Order via WhatsApp
+                </a>
+            </div>
+
+            <div class="product-card">
+                <img src="ice.jpeg" alt="Ice Oversized T-Shirt">
+                <h3>Oversized T-Shirt - Ice</h3>
+                <div class="price">200 MAD</div>
+                <a href="https://wa.me/212625992151?text=Hello%2C%20I%20want%20to%20order%20the%20Ice%20T-Shirt" target="_blank" class="btn btn-whatsapp">
+                    <i class="fab fa-whatsapp"></i> Order via WhatsApp
+                </a>
+            </div>
+
+            <div class="product-card">
+                <img src="nami.jpeg" alt="Nami Oversized T-Shirt">
+                <h3>Oversized T-Shirt - Nami</h3>
+                <div class="price">200 MAD</div>
+                <a href="https://wa.me/212625992151?text=Hello%2C%20I%20want%20to%20order%20the%20Nami%20T-Shirt" target="_blank" class="btn btn-whatsapp">
+                    <i class="fab fa-whatsapp"></i> Order via WhatsApp
+                </a>
+            </div>
+
+            <div class="product-card">
+                <img src="zoro.jpeg" alt="Zoro Winter Hoodie">
+                <h3>Winter Hoodie - Zoro</h3>
+                <div class="price">200 MAD</div>
+                <a href="https://wa.me/212625992151?text=Hello%2C%20I%20want%20to%20order%20the%20Zoro%20Hoodie" target="_blank" class="btn btn-whatsapp">
+                    <i class="fab fa-whatsapp"></i> Order via WhatsApp
+                </a>
+            </div>
+
+            <div class="product-card">
+                <img src="lofisan.jpeg" alt="Lofi San Winter Hoodie">
+                <h3>Winter Hoodie - Lofi San</h3>
+                <div class="price">200 MAD</div>
+                <a href="https://wa.me/212625992151?text=Hello%2C%20I%20want%20to%20order%20the%20Lofi%20San%20Hoodie" target="_blank" class="btn btn-whatsapp">
+                    <i class="fab fa-whatsapp"></i> Order via WhatsApp
+                </a>
+            </div>
+
+            <div class="product-card">
+                <img src="namisan.jpeg" alt="Nami San Winter Hoodie">
+                <h3>Winter Hoodie - Nami San</h3>
+                <div class="price">200 MAD</div>
+                <a href="https://wa.me/212625992151?text=Hello%2C%20I%20want%20to%20order%20the%20Nami%20San%20Hoodie" target="_blank" class="btn btn-whatsapp">
+                    <i class="fab fa-whatsapp"></i> Order via WhatsApp
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <a href="
